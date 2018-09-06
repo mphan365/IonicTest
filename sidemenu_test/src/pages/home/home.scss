@@ -1,5 +1,26 @@
 
 page-home {
 
+}
 
+#incoming.col {
+    border: solid 1px black;
+
+    background-color:#E0615F;
+}
+
+#active.col {
+    border: solid 1px black;
+
+    background-color:#EECA42;
+}
+
+#completed.col {
+    border: solid 1px black;
+
+    background-color:#40DD5E;
+}
+
+ion-icon {
+    font-size:25px;
 }

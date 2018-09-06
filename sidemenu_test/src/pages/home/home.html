@@ -1,38 +1,75 @@
 
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title>CodeStroke</ion-title>
+    <img src="assets/imgs/logo-separated.png" height=45px>
+
+    <ion-title class="titleicon" style="display:inline-block" *ngIf="!isSearchbarOpened" >
+        Welcome Terry Wrist
+    </ion-title>
+    <ion-buttons end>
+        <button >
+            <ion-icon name="notifications"> </ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+        <button >
+            <ion-icon name="log-out"> </ion-icon>
+        </button>
+    </ion-buttons>
+
+
+    <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($find)" (ionCancel)="isSearchbarOpened=false"> </ion-searchbar>
+    <ion-buttons end>
+        <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+            <ion-icon name="search"> </ion-icon>
+        </button>
+    </ion-buttons>
 
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
+    <button ion-button icon-end color="secondary">
+        Refresh
+        <ion-icon name="refresh"></ion-icon>
+
+    </button>
+    <button ion-button icon-end color="tertiary">
+        New Case
+        <ion-icon name="add"></ion-icon>
+    </button>
+    <button ion-button icon-end color="quartiary">
+        Event Log
+        <ion-icon name="clipboard"></ion-icon>
+    </button>
     <h3> Patient Workflow </h3>
 
     <ion-grid>
         <ion-row>
-            <ion-col col-md-3>
+            <ion-col col-md-3 id="incoming">
                 <h4> Incoming </h4>
             </ion-col>
-            <ion-col col-md-3 offset-md-1>
+            <ion-col col-md-3 offset-md-1 id="active">
                 <h4> Active </h4>
             </ion-col>
-            <ion-col col-md-3 offset-md-1>
+            <ion-col col-md-3 offset-md-1 id="completed">
                 <h4> Completed </h4>
             </ion-col>
         </ion-row>
         <ion-row align-items-start>
-            <ion-col col-md-3>
+            <ion-col col-md-3 id="incoming">
                 <p> Incoming Patient 1 </p>
             </ion-col>
-            <ion-col col-md-3 offset-md-1>
+            <ion-col col-md-3 offset-md-1 id="active">
                 <p> Active Patient 2 </p>
             </ion-col>
-            <ion-col col-md-3 offset-md-1>
+            <ion-col col-md-3 offset-md-1 id="completed">
                 <p> Completed Patient 3 </p>
             </ion-col>
         </ion-row>

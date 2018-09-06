@@ -23,9 +23,6 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
-.toolbar-background {
-  background-color: #FFA500;
-}
 
 // Named Color Variables
 // --------------------------------------------------
@@ -36,8 +33,10 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #4169E1,
-  secondary:  #FFD700,
+  primary:    #FFD700,
+  secondary:  #ADFF2F,
+  tertiary:   #4169E1,
+  quartiary:  #B0E0E6,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
