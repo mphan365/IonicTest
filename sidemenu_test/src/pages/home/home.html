@@ -10,18 +10,6 @@
     <ion-title class="titleicon" style="display:inline-block" *ngIf="!isSearchbarOpened" >
         Welcome Terry Wrist
     </ion-title>
-    <ion-buttons end>
-        <button >
-            <ion-icon name="notifications"> </ion-icon>
-        </button>
-    </ion-buttons>
-
-    <ion-buttons end>
-        <button >
-            <ion-icon name="log-out"> </ion-icon>
-        </button>
-    </ion-buttons>
-
 
     <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($find)" (ionCancel)="isSearchbarOpened=false"> </ion-searchbar>
     <ion-buttons end>
@@ -30,25 +18,38 @@
         </button>
     </ion-buttons>
 
+
+    <ion-buttons end>
+        <button margin-left=10px margin-right=10px>
+            <ion-icon name="notifications"> </ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+        <button>
+            <ion-icon name="log-out"> </ion-icon>
+        </button>
+    </ion-buttons>
+
+
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-    <button ion-button icon-end color="secondary">
+    <button ion-button icon-end color="secondary" round>
         Refresh
         <ion-icon name="refresh"></ion-icon>
-
     </button>
-    <button ion-button icon-end color="tertiary">
+    <button ion-button icon-end color="tertiary" margin-left=20px margin-right=20px round>
         New Case
         <ion-icon name="add"></ion-icon>
     </button>
-    <button ion-button icon-end color="quartiary">
+    <button ion-button icon-end color="quartiary" round>
         Event Log
         <ion-icon name="clipboard"></ion-icon>
     </button>
-    <h3> Patient Workflow </h3>
+    <h3>&nbsp; Patient Workflow </h3>
 
     <ion-grid>
         <ion-row>
@@ -65,6 +66,7 @@
         <ion-row align-items-start>
             <ion-col col-md-3 id="incoming">
                 <p> Incoming Patient 1 </p>
+                <p> Test Patient 4 </p>
             </ion-col>
             <ion-col col-md-3 offset-md-1 id="active">
                 <p> Active Patient 2 </p>
